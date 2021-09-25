@@ -2,8 +2,6 @@ using Prism;
 using Prism.Ioc;
 using WagoneeMobile.ViewModels;
 using WagoneeMobile.Views;
-using Xamarin.Essentials.Implementation;
-using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms;
 
 namespace WagoneeMobile
@@ -24,8 +22,6 @@ namespace WagoneeMobile
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
-
             containerRegistry.RegisterForNavigation<NavigationPage>();
             containerRegistry.RegisterForNavigation<MainPage, MainPageViewModel>();
         }
